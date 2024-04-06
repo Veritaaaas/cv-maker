@@ -1,7 +1,7 @@
 
 function General_information() {
     return (
-        <div>
+        <div className="Personal-Information">
             <h1>Personal Information</h1>
             <label>Full Name</label>
             <input type="text" placeholder="Enter your full name" />

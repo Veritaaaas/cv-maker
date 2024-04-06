@@ -5,12 +5,16 @@ import Work_experience from "./Work_experience"
 
 function App() {
   return (
-    <>
-      <General_information />
-      <Education />
-      <Work_experience />
-      <Resume />
-    </>
+    <div className="content">
+      <div className="input-container">
+        <General_information />
+        <Education />
+        <Work_experience />
+      </div>
+      <div className="output-container">
+        <Resume />
+      </div>
+    </div>
   )
 }
 

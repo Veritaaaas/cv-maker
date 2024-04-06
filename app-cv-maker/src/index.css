@@ -1,0 +1,52 @@
+:root {
+    --main-font: 'Roboto', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font);
+    background-color: #f5f5f5;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+}
+
+.Personal-Information {
+    display: flex;
+    max-width: 20rem;
+    flex-direction: column;
+    font-family: var(--main-font);
+    background-color: #ffff;
+    padding: 2rem;
+    border-radius: 10px;
+    row-gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.Education {
+    display: flex;
+    max-width: 20rem;
+    flex-direction: column;
+    font-family: var(--main-font);
+    background-color: #ffff;
+    padding: 2rem;
+    border-radius: 10px;
+    row-gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.Experience {
+    display: flex;
+    max-width: 20rem;
+    flex-direction: column;
+    font-family: var(--main-font);
+    background-color: #ffff;
+    padding: 2rem;
+    border-radius: 10px;
+    row-gap: 0.5rem;
+    margin-bottom: 2rem;
+}

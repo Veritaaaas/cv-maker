@@ -1,7 +1,7 @@
 
 function Work_experience() {
     return (
-        <div>
+        <div className="Experience">
             <h1>Work Experience</h1>
             <label>Company Name</label>
             <input type="text" placeholder="Enter your company name" />

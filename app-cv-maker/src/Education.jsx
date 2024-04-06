@@ -1,7 +1,7 @@
 
 function Education() {
     return (
-        <div>
+        <div className="Education">
             <h1>Education</h1>
             <label>University</label>
             <input type="text" placeholder="Enter your university" />
