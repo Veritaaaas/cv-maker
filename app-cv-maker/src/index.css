@@ -50,3 +50,33 @@ html, body {
     row-gap: 0.5rem;
     margin-bottom: 2rem;
 }
+
+
+/* Resume Part */
+.output-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.Resume {
+    padding: 1rem;
+    background-color: #ffff;
+    border: 1px solid black;
+}
+
+.personal-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.personal-details {
+    display: flex;
+    gap: 10px;
+}
+
+.personal-details div {
+    padding-right: 10px;
+    border-right: 1px solid black;
+}
