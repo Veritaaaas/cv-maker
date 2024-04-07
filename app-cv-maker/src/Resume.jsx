@@ -1,13 +1,22 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import './resume.css';
 
-function Resume() {
+function Resume( 
+    {
+        fullName = "John Doe", 
+        email = "johndoe@gmail.com", 
+        phoneNumber = "0123456789", 
+        address = "Place, PH"
+    }) {
     return (
         <div className="Resume">
             <div className="personal-info">
-                <div className="name">John Doe</div>
+                <div className="name">{fullName}</div>
                 <div className="personal-details">
-                    <div className="address">Place, PH</div>
-                    <div className="phone-number">+63 123 456 7890</div>
-                    <div className="email">johndoe@gmail.com</div>
+                    <div className="address">{address}</div>
+                    <div className="phone-number">{phoneNumber}</div>
+                    <div className="email">{email}</div>
                 </div>
             </div>
 
@@ -96,7 +105,7 @@ function Resume() {
                     </div>
                     <div className="awards">
                         <ul>
-                            <li>Dean's List Awardee</li>
+                            <li>Dean List Awardee</li>
                             <li>Best Thesis Award</li>
                         </ul>
                     </div>
@@ -105,5 +114,14 @@ function Resume() {
         </div>
     )
 }
+
+Resume.propTypes = {
+    fullName: PropTypes.string,
+    email: PropTypes.string,
+    phoneNumber: PropTypes.string,
+    address: PropTypes.string,
+  };
+  
+  
 
 export default Resume;
