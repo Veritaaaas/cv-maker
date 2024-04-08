@@ -1,0 +1,18 @@
+.Personal-Information {
+    display: flex;
+    max-width: 20rem;
+    flex-direction: column;
+    font-family: var(--main-font);
+    background-color: #ffff;
+    padding: 2rem;
+    border-radius: 10px;
+    row-gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.Personal-Information input {
+    font-family: var(--main-font);
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 10px;
+}
