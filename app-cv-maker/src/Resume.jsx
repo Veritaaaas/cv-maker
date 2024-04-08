@@ -9,9 +9,9 @@ function Resume(
         phoneNumber = "0123456789", 
         address = "Place, PH",
 
-        languages = ['Python'],
-        frameworks = ['React'],
-        tools = ['Git']
+        languages,
+        frameworks,
+        tools
     }) {
     return (
         <div className="Resume">

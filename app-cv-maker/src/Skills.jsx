@@ -36,7 +36,7 @@ function Skills( { languages, setLanguages, frameworks, setFrameworks, tools, se
           </div>
         ))}
         <div className='add-programming-language'>
-          <input type='text' value={newLanguage} onChange={(e) => setNewLanguage(e.target.value)} />
+          <input type='text' value={newLanguage} onChange={(e) => setNewLanguage(e.target.value)} placeholder='Python' />
           <button className='add' onClick={() => handleAddClick(setLanguages, newLanguage, setNewLanguage)}><FontAwesomeIcon icon={faPlus} /></button>
         </div>
       </div>
@@ -49,7 +49,7 @@ function Skills( { languages, setLanguages, frameworks, setFrameworks, tools, se
           </div>
         ))}
         <div className='add-framework'>
-          <input type='text' value={newFramework} onChange={(e) => setNewFramework(e.target.value)} />
+          <input type='text' value={newFramework} onChange={(e) => setNewFramework(e.target.value)} placeholder='React' />
           <button className='add' onClick={() => handleAddClick(setFrameworks, newFramework, setNewFramework)}><FontAwesomeIcon icon={faPlus} /></button>
         </div>
       </div>
@@ -62,7 +62,7 @@ function Skills( { languages, setLanguages, frameworks, setFrameworks, tools, se
           </div>
         ))}
         <div className='add-tool'>
-          <input type='text' value={newTool} onChange={(e) => setNewTool(e.target.value)} />
+          <input type='text' value={newTool} onChange={(e) => setNewTool(e.target.value)} placeholder='Git' />
           <button className='add' onClick={() => handleAddClick(setTools, newTool, setNewTool)}><FontAwesomeIcon icon={faPlus} /></button>
         </div>
       </div>

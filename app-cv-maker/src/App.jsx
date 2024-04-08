@@ -11,9 +11,9 @@ function App() {
  const [phoneNumber, setPhoneNumber] = useState('');
  const [address, setAddress] = useState('');
 
- const [languages, setLanguages] = useState(['Python']);
-const [frameworks, setFrameworks] = useState(['React']);
-const [tools, setTools] = useState(['Git']);
+ const [languages, setLanguages] = useState([]);
+const [frameworks, setFrameworks] = useState([]);
+const [tools, setTools] = useState([]);
 
  return (
     <div className="content">
@@ -36,8 +36,8 @@ const [tools, setTools] = useState(['Git']);
           tools={tools} 
           setTools={setTools}
         />
-        <Education />
         <Work_experience />
+        <Education />
       </div>
       <div className="output-container">
         <Resume 
@@ -46,9 +46,9 @@ const [tools, setTools] = useState(['Git']);
           phoneNumber={phoneNumber || undefined} 
           address={address || undefined}
           
-          languages={languages}
-          frameworks={frameworks}
-          tools={tools}
+          languages={languages.length > 0 ? languages : ['Python', 'JavaScript', 'Java']}
+          frameworks={frameworks.length > 0 ? frameworks : ['React', 'Django', 'Spring']}
+          tools={tools.length > 0 ? tools : ['Docker', 'Jenkins', 'Git']}
         />
       </div>
     </div>
