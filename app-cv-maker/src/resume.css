@@ -26,18 +26,52 @@
     border-right: 1px solid black;
 }
 
+/* skills */
 .skills h4 {
     border-bottom: 1px solid black;
     margin: 10px;
 }
 
 .skill-label {
+    margin: 0;
     font-weight: bold;
 }
 
 .skills .skill-list {
     padding-left: 2rem;
 }
+
+.skills ul {
+    margin: 0;
+    margin-left: 10px;
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills ul li {
+    margin-right: 10px;
+}
+
+.languages {
+    display: flex;
+    align-items: center;
+    max-height: 2rem;
+}
+
+.frameworks {
+    display: flex;
+    align-items: center;
+    max-height: 2rem;
+}
+
+.tools {
+    display: flex;
+    align-items: center;
+    max-height: 2rem;
+}
+
+
 
 .experience h4 {
     border-bottom: 1px solid black;

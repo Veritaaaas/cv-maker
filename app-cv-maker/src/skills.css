@@ -1,0 +1,171 @@
+.Skills {
+    display: flex;
+    max-width: 20rem;
+    flex-direction: column;
+    font-family: var(--main-font);
+    background-color: #ffff;
+    padding: 2rem;
+    border-radius: 10px;
+    row-gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.Skills h1 {
+    margin: 0;
+}
+
+.programming-languages-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.programming-language {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 10px;
+    gap: 10px;
+    background-color: #84fa96 ;
+}
+
+.programming-language p {
+    margin: 0;
+}
+
+.programming-language .remove {
+    font-family: var(--main-font);
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.add-programming-language {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.add-programming-language .add {
+    font-family: var(--main-font);
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.add-programming-language input {
+    max-width: 7rem;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+/* frameworks */
+
+.frameworks-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.framework {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 10px;
+    gap: 10px;
+    background-color: #84fa96 ;
+}
+
+.framework p {
+    margin: 0;
+}
+
+.framework .remove {
+    font-family: var(--main-font);
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.add-framework {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.add-framework .add {
+    font-family: var(--main-font);
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.add-framework input {
+    max-width: 7rem;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+/* tools */
+.tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tool {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 10px;
+    gap: 10px;
+    background-color: #84fa96 ;
+}
+
+.tool p {
+    margin: 0;
+}
+
+.tool .remove {
+    font-family: var(--main-font);
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.add-tool {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.add-tool .add {
+    font-family: var(--main-font);
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.add-tool input {
+    max-width: 7rem;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+}

@@ -7,7 +7,11 @@ function Resume(
         fullName = "John Doe", 
         email = "johndoe@gmail.com", 
         phoneNumber = "0123456789", 
-        address = "Place, PH"
+        address = "Place, PH",
+
+        languages = ['Python'],
+        frameworks = ['React'],
+        tools = ['Git']
     }) {
     return (
         <div className="Resume">
@@ -23,9 +27,21 @@ function Resume(
             <div className="skills">
                 <h4>Technical Skills</h4>
                 <div className="skill-list">
-                    <div className="languages"><span className="skill-label">Languages</span>: Python, SQL, PHP, JavaScript</div>
-                    <div className="frameworks"><span className="skill-label">Frameworks</span>: React, Django, Laravel, Node.js</div>
-                    <div className="tools"><span className="skill-label">Tools</span>: Git, Docker, Jenkins, AWS</div>
+                    <div className="languages"><span className="skill-label">Languages</span>: 
+                        <ul>
+                            {languages.map((language, index) => <li key={index}>{language},</li>)}
+                        </ul>
+                    </div>
+                    <div className="frameworks"><span className="skill-label">Frameworks</span>: 
+                        <ul>
+                            {frameworks.map((framework, index) => <li key={index}>{framework},</li>)}
+                        </ul>
+                    </div>
+                    <div className="tools"><span className="skill-label">Tools</span>:
+                        <ul>
+                            {tools.map((tool, index) => <li key={index}>{tool},</li>)}
+                        </ul>
+                    </div>
                 </div>
             </div>
 
