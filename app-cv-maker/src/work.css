@@ -1,0 +1,113 @@
+.add-work {
+    display: flex;
+    justify-content: center;
+}
+
+.add-work .add-work-button {
+    background-color: #f5f5f5;
+    padding: 5px;
+    width: 7rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-work .add-work-button .add-div {
+    height: fit-content;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    display: flex;
+    background-color: white;
+}
+
+.add-work .add-work-button .add-div .add-icon {
+    margin-right: 10px;
+}
+
+.work-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    row-gap: 0.5rem;
+}
+
+.contributions {
+    display: flex;
+    flex-direction: column;
+}
+
+.contributions .contribution {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 10px;
+    gap: 10px;
+    background-color: rgb(237, 237, 237);
+}
+
+.contribution p {
+    margin: 0;
+}
+
+.contribution .remove {
+    font-family: var(--main-font);
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.add-contribution {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-contribution button {
+    font-family: var(--main-font);
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.work-form-options {
+    display: grid;
+    width: 100%;
+    justify-content: start;
+    grid-template-columns: 3fr 1fr;
+    margin-top: 1rem;
+}
+
+.work-form-options button {
+    color: #7c7c7c;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.work-form-options div {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.trash-icon {
+    margin-right: 10px;
+}
+
+.work-form .save {
+    background-color: #4681f4;
+    color: white;
+}

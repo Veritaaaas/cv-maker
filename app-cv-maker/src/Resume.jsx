@@ -11,7 +11,9 @@ function Resume(
 
         languages,
         frameworks,
-        tools
+        tools,
+
+        works
     }) {
     return (
         <div className="Resume">
@@ -48,32 +50,22 @@ function Resume(
             <div className="experience">
                 <h4>Work Experience</h4>
                 <div className="job-list">
-                    <div className="job">
+                    {works.map((work, index) => (
+                    <div className="job" key={index}>
                         <div className="primary-info">
-                            <div className="job-title">Software Engineer</div>
-                            <div className="company">Company A</div>
-                            <div className="date">Jan 2020 - Present</div>
+                        <div className="job-title">{work.position}</div>
+                        <div className="company">{work.companyName}</div>
+                        <div className="date">{work.timeFrame}</div>
                         </div>
                         <div className="job-description">
-                            <ul>
-                                <li>Developed and maintained web applications using Django and React</li>
-                                <li>Implemented CI/CD pipelines using Jenkins and Docker</li>
-                            </ul>
+                        <ul>
+                            {work.contributions.map((contribution, index) => (
+                            <li key={index}>{contribution}</li>
+                            ))}
+                        </ul>
                         </div>
                     </div>
-                    <div className="job">
-                        <div className="primary-info">
-                            <div className="job-title">Software Engineer</div>
-                            <div className="company">Company A</div>
-                            <div className="date">Jan 2020 - Present</div>
-                        </div>
-                        <div className="job-description">
-                            <ul>
-                                <li>Developed and maintained web applications using Django and React</li>
-                                <li>Implemented CI/CD pipelines using Jenkins and Docker</li>
-                            </ul>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
 

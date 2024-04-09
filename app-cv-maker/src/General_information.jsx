@@ -1,4 +1,5 @@
 import React from 'react';
+import './general_info.css';
 
 function General_information({ fullName, setFullName, email, setEmail, phoneNumber, setPhoneNumber, address, setAddress }) {
     return (

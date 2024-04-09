@@ -6,14 +6,27 @@ import Education from "./Education";
 import Work_experience from "./Work_experience";
 
 function App() {
- const [fullName, setFullName] = useState('');
- const [email, setEmail] = useState('');
- const [phoneNumber, setPhoneNumber] = useState('');
- const [address, setAddress] = useState('');
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [address, setAddress] = useState('');
 
- const [languages, setLanguages] = useState([]);
-const [frameworks, setFrameworks] = useState([]);
-const [tools, setTools] = useState([]);
+  const [languages, setLanguages] = useState([]);
+  const [frameworks, setFrameworks] = useState([]);
+  const [tools, setTools] = useState([]);
+
+  const [works, setWorks] = useState([
+    {
+      companyName: 'Company A',
+      position: 'Software Engineer',
+      timeFrame: 'Jan 2020 - Present',
+      contributions: [
+        'Developed and maintained web applications using Django and React',
+        'Implemented CI/CD pipelines using Jenkins and Docker',
+      ],
+    },
+    // more works...
+  ]);
 
  return (
     <div className="content">
@@ -36,7 +49,7 @@ const [tools, setTools] = useState([]);
           tools={tools} 
           setTools={setTools}
         />
-        <Work_experience />
+        <Work_experience works={works} setWorks={setWorks} />
         <Education />
       </div>
       <div className="output-container">
@@ -49,6 +62,8 @@ const [tools, setTools] = useState([]);
           languages={languages.length > 0 ? languages : ['Python', 'JavaScript', 'Java']}
           frameworks={frameworks.length > 0 ? frameworks : ['React', 'Django', 'Spring']}
           tools={tools.length > 0 ? tools : ['Docker', 'Jenkins', 'Git']}
+
+          works={works}
         />
       </div>
     </div>

@@ -28,7 +28,7 @@
     font-size: 15px;
     border-radius: 10px;
     gap: 10px;
-    background-color: #84fa96 ;
+    background-color: rgb(237, 237, 237);
 }
 
 .programming-language p {
@@ -81,7 +81,7 @@
     font-size: 15px;
     border-radius: 10px;
     gap: 10px;
-    background-color: #84fa96 ;
+    background-color: rgb(237, 237, 237);
 }
 
 .framework p {
@@ -133,7 +133,7 @@
     font-size: 15px;
     border-radius: 10px;
     gap: 10px;
-    background-color: #84fa96 ;
+    background-color: rgb(237, 237, 237);
 }
 
 .tool p {
