@@ -4,6 +4,7 @@ import Skills from './Skills';
 import General_information from "./General_information";
 import Education from "./Education";
 import Work_experience from "./Work_experience";
+import Projects from './Projects';
 
 function App() {
   const [fullName, setFullName] = useState('');
@@ -28,6 +29,17 @@ function App() {
     // more works...
   ]);
 
+  const [projects, setProjects] = useState([
+    {
+      projectTitle: 'Project A',
+      descriptions: [
+        'Developed a web application using Django and React',
+        'Implemented CI/CD pipelines using Jenkins and Docker',
+      ],
+    },
+    // more projects...
+  ]);
+
  return (
     <div className="content">
       <div className="input-container">
@@ -50,6 +62,7 @@ function App() {
           setTools={setTools}
         />
         <Work_experience works={works} setWorks={setWorks} />
+        <Projects projects={projects} setProjects={setProjects} />  
         <Education />
       </div>
       <div className="output-container">
@@ -64,6 +77,8 @@ function App() {
           tools={tools.length > 0 ? tools : ['Docker', 'Jenkins', 'Git']}
 
           works={works}
+
+          projects={projects}
         />
       </div>
     </div>

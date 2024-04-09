@@ -13,7 +13,9 @@ function Resume(
         frameworks,
         tools,
 
-        works
+        works,
+
+        projects
     }) {
     return (
         <div className="Resume">
@@ -72,33 +74,18 @@ function Resume(
             <div className="projects">
                 <h4>Projects</h4>
                 <div className="project-list">
-                    <div className="project">
-                        <div className="project-title">Project A</div>
+                    {projects.map((project, index) => (
+                    <div className="project" key={index}>
+                        <div className="project-title">{project.projectTitle}</div>
                         <div className="project-description">
-                            <ul>
-                                <li>Developed a web application using Django and React</li>
-                                <li>Implemented CI/CD pipelines using Jenkins and Docker</li>
-                            </ul>
+                        <ul>
+                            {project.descriptions.map((description, index) => (
+                            <li key={index}>{description}</li>
+                            ))}
+                        </ul>
                         </div>
                     </div>
-                    <div className="project">
-                        <div className="project-title">Project B</div>
-                        <div className="project-description">
-                            <ul>
-                                <li>Developed a web application using Django and React</li>
-                                <li>Implemented CI/CD pipelines using Jenkins and Docker</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="project">
-                        <div className="project-title">Project C</div>
-                        <div className="project-description">
-                            <ul>
-                                <li>Developed a web application using Django and React</li>
-                                <li>Implemented CI/CD pipelines using Jenkins and Docker</li>
-                            </ul>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
 
