@@ -40,6 +40,17 @@ function App() {
     // more projects...
   ]);
 
+  const [educations, setEducations] = useState([
+    {
+      university: 'University A',
+      degree: 'Bachelor of Science in Computer Science',
+      timeFrame: '2016 - 2020',
+      location: 'City A',
+      awards: ['Dean\'s List', 'Scholarship'],
+    },
+    // more educations...
+  ]);
+
  return (
     <div className="content">
       <div className="input-container">
@@ -63,7 +74,7 @@ function App() {
         />
         <Work_experience works={works} setWorks={setWorks} />
         <Projects projects={projects} setProjects={setProjects} />  
-        <Education />
+        <Education educations={educations} setEducations={setEducations}/>
       </div>
       <div className="output-container">
         <Resume 
@@ -79,6 +90,8 @@ function App() {
           works={works}
 
           projects={projects}
+
+          educations={educations}
         />
       </div>
     </div>

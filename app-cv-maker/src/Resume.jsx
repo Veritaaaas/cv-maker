@@ -12,10 +12,9 @@ function Resume(
         languages,
         frameworks,
         tools,
-
         works,
-
-        projects
+        projects,
+        educations
     }) {
     return (
         <div className="Resume">
@@ -89,21 +88,24 @@ function Resume(
                 </div>
             </div>
 
-            <div className="education">
+            <div className="education-resume">
                 <h4>Education</h4>
                 <div className="school-list">
-                    <div className="school">
-                        <div className="school-name">University of ABC</div>
-                        <div className="location">Place City, PH</div>
-                        <div className="degree">Bachelor of Science in Computer Science</div>
-                        <div className="date">2016 - 2020</div>
-                    </div>
-                    <div className="awards">
-                        <ul>
-                            <li>Dean List Awardee</li>
-                            <li>Best Thesis Award</li>
-                        </ul>
-                    </div>
+                    {educations.map((education, index) => (
+                        <div className="school" key={index}>
+                            <div className="school-name">{education.university}</div>
+                            <div className="location">{education.location}</div>
+                            <div className="degree">{education.degree}</div>
+                            <div className="date">{education.timeFrame}</div>
+                            <div className="awards">
+                                <ul>
+                                    {education.awards.map((award, index) => (
+                                        <li key={index}>{award}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

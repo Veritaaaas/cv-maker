@@ -1,6 +1,8 @@
 .output-container {
     display: flex;
     justify-content: center;
+    height: 100vh;
+    max-height: fit-content;
 }
 
 
@@ -119,24 +121,29 @@
     font-weight: bold;
 }
 
-.education h4 {
+.education-resume h4 {
     border-bottom: 1px solid black;
     margin: 10px;
 }
 
-.education .school-list {
+.education-resume .school-list {
     padding-left: 2rem;
     padding-right: 2rem;
     font-size: 15px;
 }
 
-.education .school {
+.education-resume .school {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
-.education .location, .education .date {
+.education-resume .location, .education-resume .date {
     display: flex;
     justify-content: flex-end;
+}
+
+.school-name {
+    font-size: 18px;
+    font-weight: bold;
 }
