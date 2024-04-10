@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faXmark, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faXmark, faTrash, faBarsProgress, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import './projects.css';
 
 function Projects({ projects, setProjects }) {
@@ -8,6 +8,7 @@ function Projects({ projects, setProjects }) {
   const [projectTitle, setProjectTitle] = useState('');
   const [descriptions, setDescriptions] = useState(['']);
   const [editingIndex, setEditingIndex] = useState(null);
+  const [isFormVisible, setIsFormVisible] = useState(false);
 
   const handleAddClick = () => {
     setIsAdding(true);
@@ -67,48 +68,55 @@ function Projects({ projects, setProjects }) {
 
   return (
     <div className="Projects">
-      <h1>Projects</h1>
-      <div className="projects-list">
-        {projects.map((project, index) => (
-          <div className="project" key={index} onClick={() => handleProjectClick(project, index)}>
-            <h4>{project.projectTitle}</h4>
-          </div>
-        ))}
+      <div className='Projects-Header'  onClick={() => setIsFormVisible(!isFormVisible)}>
+        <h1><FontAwesomeIcon icon={faBarsProgress} className='icon'/> Projects</h1>
+        <FontAwesomeIcon icon={isFormVisible ? faChevronUp : faChevronDown}/>  
       </div>
-      <div className="add-project">
-        {!isAdding && (
-          <button className="add-project-button" onClick={handleAddClick}>
-            <div className="add-div"><FontAwesomeIcon icon={faPlus} className="add-icon"/>Project</div>
-          </button>
-        )}
-        {isAdding && (
-          <div className='project-form'>
-            <label>Title</label>
-            <input type='text' placeholder='Project Title' value={projectTitle} onChange={(e) => setProjectTitle(e.target.value)} />
-            <label>Descriptions</label>
-            <div className='descriptions'>
-                {descriptions.map((description, index) => (
-                <div key={index} className='description'>
-                    <input type='text' placeholder='Project Description' value={description} onChange={(e) => handleDescriptionChange(e, index)} />
-                    <button className='remove-description' onClick={() => handleRemoveDescriptionClick(index)}><FontAwesomeIcon icon={faXmark} /></button>
+      {isFormVisible && (
+        <>
+          <div className="projects-list">
+            {!isAdding && projects.map((project, index) => (
+              <div className="project" key={index} onClick={() => handleProjectClick(project, index)}>
+                <h4>{project.projectTitle}</h4>
+              </div>
+            ))}
+          </div>
+          <div className="add-project">
+            {!isAdding && (
+              <button className="add-project-button" onClick={handleAddClick}>
+                <div className="add-div"><FontAwesomeIcon icon={faPlus} className="add-icon"/>Project</div>
+              </button>
+            )}
+            {isAdding && (
+              <div className='project-form'>
+                <label>Title</label>
+                <input type='text' placeholder='Project Title' value={projectTitle} onChange={(e) => setProjectTitle(e.target.value)} />
+                <label>Descriptions</label>
+                <div className='descriptions'>
+                    {descriptions.map((description, index) => (
+                    <div key={index} className='description'>
+                        <input type='text' placeholder='Project Description' value={description} onChange={(e) => handleDescriptionChange(e, index)} />
+                        <button className='remove-description' onClick={() => handleRemoveDescriptionClick(index)}><FontAwesomeIcon icon={faXmark} /></button>
+                    </div>
+                    ))}
                 </div>
-                ))}
-            </div>
-            <div className='add-description'>
-              <button className='add' onClick={() => setDescriptions([...descriptions, ''])}><FontAwesomeIcon icon={faPlus} /></button>
-            </div>
-            <div className='project-form-options'>
-              <div>
-                <button className='delete' onClick={handleDeleteClick}><FontAwesomeIcon icon={faTrash} className='trash-icon'/>Delete</button>
+                <div className='add-description'>
+                  <button className='add' onClick={() => setDescriptions([...descriptions, ''])}><FontAwesomeIcon icon={faPlus} /></button>
+                </div>
+                <div className='project-form-options'>
+                  <div>
+                    <button className='delete' onClick={handleDeleteClick}><FontAwesomeIcon icon={faTrash} className='trash-icon'/>Delete</button>
+                  </div>
+                  <div>
+                    <button className='cancel' onClick={handleCancelClick}>Cancel</button>
+                    <button className='save' onClick={handleSaveClick}>Save</button>
+                  </div>
+                </div>
               </div>
-              <div>
-                <button className='cancel' onClick={handleCancelClick}>Cancel</button>
-                <button className='save' onClick={handleSaveClick}>Save</button>
-              </div>
-            </div>
+            )}
           </div>
-        )}
-      </div>
+        </>
+      )}
     </div>
   )
 }

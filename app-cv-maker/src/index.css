@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-    --main-font: 'Roboto', sans-serif;
+    --main-font: 'Montserrat', sans-serif;
 }
 
 html, body {
@@ -11,14 +13,14 @@ html, body {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     padding: 2rem;
 }
 
 
 .Education {
     display: flex;
-    max-width: 20rem;
+    width: 20rem;
     flex-direction: column;
     font-family: var(--main-font);
     background-color: #ffff;
@@ -26,11 +28,12 @@ html, body {
     border-radius: 10px;
     row-gap: 0.5rem;
     margin-bottom: 2rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .Experience {
     display: flex;
-    max-width: 20rem;
+    width: 20rem;
     flex-direction: column;
     font-family: var(--main-font);
     background-color: #ffff;
@@ -38,11 +41,12 @@ html, body {
     border-radius: 10px;
     row-gap: 0.5rem;
     margin-bottom: 2rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .Projects {
     display: flex;
-    max-width: 20rem;
+    width: 20rem;
     flex-direction: column;
     font-family: var(--main-font);
     background-color: #ffff;
@@ -50,6 +54,7 @@ html, body {
     border-radius: 10px;
     row-gap: 0.5rem;
     margin-bottom: 2rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 

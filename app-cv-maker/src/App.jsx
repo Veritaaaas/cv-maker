@@ -71,10 +71,11 @@ function App() {
           setFrameworks={setFrameworks} 
           tools={tools} 
           setTools={setTools}
+          className="info-input" 
         />
-        <Work_experience works={works} setWorks={setWorks} />
-        <Projects projects={projects} setProjects={setProjects} />  
-        <Education educations={educations} setEducations={setEducations}/>
+        <Work_experience works={works} setWorks={setWorks} className="info-input" />
+        <Projects projects={projects} setProjects={setProjects} className="info-input" />  
+        <Education educations={educations} setEducations={setEducations} className="info-input" />
       </div>
       <div className="output-container">
         <Resume 
